@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/painghtetzan/travellistapp.git/static/css/main.e0e3c456.css",
+    "main.js": "/painghtetzan/travellistapp.git/static/js/main.2acb5391.js",
+    "index.html": "/painghtetzan/travellistapp.git/index.html",
+    "main.e0e3c456.css.map": "/painghtetzan/travellistapp.git/static/css/main.e0e3c456.css.map",
+    "main.2acb5391.js.map": "/painghtetzan/travellistapp.git/static/js/main.2acb5391.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e0e3c456.css",
+    "static/js/main.2acb5391.js"
+  ]
+}
