@@ -9,11 +9,18 @@ function Logo() {
 function Form(props) {
   const [description,setDescription] = useState('')
   const [quantity,setQuantity] = useState(1)
+  
+  function handleAddItems(value){
+    props.setInitialItems(prev=>{
+     return [...prev,value]
+    })
+  }
+
   function handleSubmit(e){
     e.preventDefault()
-    props.setInitialItems(prev=>{
-     return [...prev,{id:props.initialItems.length+1,description:description,quantity:quantity}]
-    })
+
+    const newitem ={id:props.initialItems.length+1,description:description,quantity:quantity}
+    handleAddItems(newitem)
     setDescription('')
     setQuantity(1)
   }
@@ -74,7 +81,7 @@ function Stats(props) {
   const percentage = (packedItem/totalitem)*100
   return (
     <footer className="stats">
-      <em>You have {totalitem} items in the list. You already packed {packedItem} ({percentage}%).</em>
+    {percentage==100? <h3 style={{backgroundColor:"green",width:300,justifySelf:'center',borderRadius:30,padding:20}}>You got everything!</h3>:<em>You have {totalitem} items in the list. You already packed {packedItem} ({percentage}%).</em>}  
     </footer>
   );
 }
